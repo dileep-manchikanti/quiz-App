@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="src/signUp/signUp.css">
+<div class="signUp">
+    <h2 class='text-center'>SignUp Page</h2>
+    <form novalidate name="signUp">                
+        <input class='form-control form-control-lg col-lg-9'  type="text" name="username" placeholder="Enter UserName" required ng-model="signUpCtrl.user.name" minlength="3">
+        <span ng-if="(signUp.username.$error.minlength || signUp.username.$error.required) && signUp.username.$touched">UserName must be of atleast 3 Characters</span>
+        <input class='form-control form-control-lg'  type="email" name="email" placeholder="Enter Email Address" required ng-model="signUpCtrl.user.email">    
+        <!-- <span ng-if="(signUp.invalidMail || signUp.email.$error.required) && signUp.email.$touched">Invalid Email</span> -->
+        <input class='form-control form-control-lg'  type="password" name="password" placeholder="Enter Password" required ng-model="signUpCtrl.user.password">
+        <input class='form-control form-control-lg'  type="password" name="confirm" placeholder="Confirm Password" required ng-model="signUpCtrl.user.confirmPassword">
+        <!-- <span ng-if="signUpCtrl.mismatch && signUp.confirm.$touched">Password Mismatched</span> -->
+        <button ng-click="signUpCtrl.submit()" class="btn btn-default">SignUp</button>
+    </form>
+</div>

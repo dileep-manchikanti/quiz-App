@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="src/signIn/signIn.css">
+<div class="signIn">
+    <h2 class='text-center'>SignIn Page</h2>
+    <form novalidate name="signIn">                
+        <input class='form-control form-control-lg'  type="email" name="email" placeholder="Enter Email Address" required ng-model="signInCtrl.user.email">    
+        <!-- <span ng-if="(signIn.invalidMail || signIn.email.$error.required) && signIn.email.$touched">Invalid Email</span> -->
+        <input class='form-control form-control-lg'  type="password" name="password" placeholder="Enter Password" required ng-model="signInCtrl.user.password">
+        <button ng-click="signInCtrl.logIn()" class="btn btn-default">signIn</button>
+    </form>
+</div>
