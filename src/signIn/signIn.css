@@ -2,7 +2,8 @@ input.form-control.form-control-lg{
     margin-left:40px;
    padding:4px;
    width:75%;
-   margin-bottom:20px;
+   margin-top: 30px;
+   margin-bottom:40px;
 }
 div.signIn{
     align-items: center;
@@ -15,7 +16,7 @@ div.signIn{
 }
 button.btn.btn-default{
     position:relative;
-    left:45%;
+    /* let:45%; */
     background-color:red;
     height:50px;
     width:80px;
@@ -26,6 +27,24 @@ button.btn.btn-default:hover{
     background-color:green;
     transform:scale(1.2);
 }
-span{
+.sign{
+    position: absolute;
+    left:40%;
+    top:70%;
+}
+a{
     color:red;
+    text-decoration: undeline;
+    margin-left:5px;
+}
+.link{
+    text-decoration: underline;
+}
+.link:hover{
+    color:green;
+}
+p{
+    margin-left: 40px;
+    font-size: large;
+    color:blue;
 }

@@ -5,6 +5,7 @@
         <input class='form-control form-control-lg'  type="email" name="email" placeholder="Enter Email Address" required ng-model="signInCtrl.user.email">    
         <!-- <span ng-if="(signIn.invalidMail || signIn.email.$error.required) && signIn.email.$touched">Invalid Email</span> -->
         <input class='form-control form-control-lg'  type="password" name="password" placeholder="Enter Password" required ng-model="signInCtrl.user.password">
-        <button ng-click="signInCtrl.logIn()" class="btn btn-default">signIn</button>
+        <div class="sign"><button ng-click="signInCtrl.logIn()" class="btn btn-default">signIn</button><a class='link' ui-sref="signUp">Didnt have an Account,Sign up here</a></div>
+        <p>click 2 times to signIn</p>
     </form>
 </div>

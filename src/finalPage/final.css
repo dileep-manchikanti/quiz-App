@@ -1,0 +1,15 @@
+span{
+    color:green;
+    font-size: xx-large;
+}
+.user{
+    background-color: chocolate;
+    margin:20px;
+    display: flex;
+    justify-content: space-between;
+    padding:1vw;
+}
+ol{
+    margin:30px;
+    font-size:xx-large;
+}

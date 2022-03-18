@@ -1,7 +1,106 @@
 body{
-    color:green;
+    color:aqua;
     font-weight: bolder;
     font-size: larger;
     height:100vh;
     background-color:#51122f;
+}
+input{
+    color:maroon;
+    font-weight: bold;
+}
+div.navbar-brand{
+    margin-left:20%;;
+}
+a{
+    color:#951C49;
+    font-size: medium;
+    font-weight:bold ;
+}
+#header-nav {
+    background-color: #f6b319;
+    border-radius: 0;
+    border: 0;
+  }
+  
+  #logo-img {
+    background: url('../images/restaurant-logo_large.png') no-repeat;
+    width: 150px;
+    height: 150px;
+    margin: 10px 15px 10px 0;
+  }
+  
+  .navbar-brand {
+    padding-top: 25px;
+  }
+  .navbar-brand h1 { /* Restaurant name */
+    font-family: 'Lora', serif;
+    color: #557c3e;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #222;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: .75;
+  }
+  .navbar-brand a:hover, .navbar-brand a:focus {
+    text-decoration: none;
+  }
+  .navbar-brand p { /* Kosher cert */
+    color: #000;
+    text-transform: uppercase;
+    font-size: .7em;
+    margin-top: 15px;
+  }
+  .navbar-brand p span { /* Star-K */
+    vertical-align: middle;
+  }
+  
+  #nav-list {
+    margin-top: 10px;
+  }
+  #nav-list a {
+    color: #951C49;
+    text-align: center;
+  }
+  #nav-list li:hover {
+    background: #E7E7E7;
+  }
+  #nav-list a span {
+    font-size: 1.8em;
+  }
+  .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+    border: 1px solid #61122f;
+  }
+  .navbar-header button.navbar-toggle {
+    clear: both;
+    margin-top: -30px;
+  }
+  .loading-indiator {
+    display: block;
+    z-index: 100;
+    background-color: #FFF;
+}
+img{
+    width: 50%;
+    height:50%;
+    position: absolute;
+    left: 25%;
+    margin: 0 auto;
+    top: 25%;
+    /* background-color:#e1e1e1 */
+}
+.loading-indicatr img {
+    width: 50%;
+    height:50%;
+    position: absolute;
+    left: 25%;
+    margin: 0 auto;
+    top: 25%;
+    background-color: #FFF;
+}
+
+.ui-view-placeholder {
+    margin-top: 60px;
 }

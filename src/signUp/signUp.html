@@ -9,6 +9,7 @@
         <input class='form-control form-control-lg'  type="password" name="password" placeholder="Enter Password" required ng-model="signUpCtrl.user.password">
         <input class='form-control form-control-lg'  type="password" name="confirm" placeholder="Confirm Password" required ng-model="signUpCtrl.user.confirmPassword">
         <!-- <span ng-if="signUpCtrl.mismatch && signUp.confirm.$touched">Password Mismatched</span> -->
-        <button ng-click="signUpCtrl.submit()" class="btn btn-default">SignUp</button>
+        <p>click 2 times to signUp</p>
+        <button ng-click="signUpCtrl.submit()" class="btn btn-default">SignUp</button><a ui-sref="signIn" class="link">Already have an Account,Sign in here</a>
     </form>
 </div>

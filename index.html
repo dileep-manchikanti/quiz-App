@@ -6,18 +6,68 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="index.css">
     </head>
-    <body ng-controller="signUpController as ctrl">
-        <header></header>
-        <ui-view></ui-view>
+    <body>
+        <header>
+            <nav id="header-nav" class="navbar navbar-default">
+                <div class="container">
+                  <div class="navbar-header">
+                    <div class="navbar-brand">
+                      <a href="index.html"><h1>Quiz</h1></a>
+                    </div>
+        
+                    <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                  </div>
+        
+                  <div id="collapsable-nav" class="collapse navbar-collapse">
+                    <ul id="nav-list" class="nav navbar-nav navbar-right">
+                      <li id="navHomeButton">
+                        <a ui-sref="instructions">
+                           Instructions</a>
+                      </li>
+                      <li id="navMenuButton" ui-sref-active="active">
+                        <a ui-sref="question">
+                          <br class="hidden-xs">Take Quiz</a>
+                      </li>
+                      <li>
+                        <a ui-sref='signUp'>
+                          <br class="hidden-xs">signUp</a>
+                          </li>
+                      <li>
+                        <a ui-sref='signIn'>
+                          <br class="hidden-xs">signIn</a>
+                          </li>
+                      <li>
+                        <a ui-sref='signOut'>
+                          <br class="hidden-xs">signOut</a>
+                      </li>
+                    </ul><!-- #nav-list -->
+                  </div><!-- .collapse .navbar-collapse -->
+                </div><!-- .container -->
+              </nav><!-- #header-nav -->
+                </div>
+              </nav>
+        </header>
+        <ui-view>
+            <div class='loading-indicator'>
+            <img  src="images/spinner.svg">
+            </div>
+        </ui-view>
         <script src="lib/jquery-2.1.4.min.js"></script>
         <script src="lib/bootstrap.min.js"></script>
         <script src="lib/angular.min.js"></script>
         <script src="lib/angular-ui-router.min.js"></script>
         <script src="quiz.module.js"></script>
         <script src="routes.js"></script>
-        <script src="service.js"></script>
+        <script src="service.js" type="module"></script>
         <script src="src/signUp/signUp.js" type="module"></script>
         <script src="src/signIn/signIn.js" type="module"></script>
-        <script src="src/instructions/instructions.js"></script>
+        <script src="src/quiz/questions.js"type='module'></script>
+        <script src="src/quiz/quizQuestion.js"></script>
+        <script src="src/finalPage/finalPage.js" type="module"></script>
     </body>
 </html>

@@ -1,0 +1,12 @@
+<!-- <quiz-question question="ctrl.name"></quiz-question>
+{{ctrl.name}} -->
+<link rel='stylesheet' href="src/quiz/questions.css">
+<div class="quiz">
+<div class="question">{{ctrl.question.question}}</div>
+<div class='option'>
+<button class='btn btn-default' id='0' ng-click="ctrl.submit(0)" >{{ctrl.question.options[0]}}</button>
+<button class='btn btn-default' id='1' ng-click="ctrl.submit(1)" >{{ctrl.question.options[1]}}</button>
+<button class='btn btn-default' id='2' ng-click="ctrl.submit(2)" >{{ctrl.question.options[2]}}</button>
+<button class='btn btn-default' id='3' ng-click="ctrl.submit(3)" >{{ctrl.question.options[3]}}</button>
+</div>
+</div>

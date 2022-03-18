@@ -1,0 +1,7 @@
+<link rel="stylesheet" href="src/finalPage/final.css">
+<h1 class="text-center">Your Final Score : {{finalCtrl.myScore}}</h1>
+<ol>
+<div class="leaderBoard" ng-repeat="score in finalCtrl.scores">
+<li><div class='user'><span class="email">{{score.username}}</span><span class="score">{{score.score}}</span></div></li>
+</div>
+</ol>

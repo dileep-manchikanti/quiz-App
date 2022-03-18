@@ -13,6 +13,10 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 console.log(app);
+
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js";
+
+const auth = getAuth(app);
 // const db = getFirestore(app);
 // console.log(db);
 // const auth = getAuth(app);
@@ -28,14 +32,30 @@ console.log(app);
         if(signUp.user!=undefined && signUp.user.email!=undefined)signUp.invalidMail=signUp.user.email.indexOf('@')==-1;
         if( signUp.user!=undefined && signUp.user.password!=undefined && signUp.user.confirmPassword!=undefined)signUp.mismatch=(signUp.user.password!==signUp.user.confirmPassword);
         signUp.submit=function(){
-            if(signUp.user.password===signUp.user.confirmPassword){
                 service.user=signUp.user;
-                alert("Signed Up succesfully.your credentials are saved sucessfully...");
-                $location.path('/signIn');
-            }
-            else{
-                alert("confirm password mismatched with password!!! Try again..");
-            }
+                var res=false;
+                if(signUp.user.password!==signUp.user.confirmPassword){
+                    alert("confirm password mismatched with password!!! Try again..");
+                }
+                else{
+                createUserWithEmailAndPassword(auth, signUp.user.email, signUp.user.password)
+                    .then((userCredential) => {
+                        // Signed in 
+                        const user = userCredential.user;
+                        console.log(user);
+                        $location.path('/signIn');
+                        res=true;
+                        alert("Signed Up succesfully.your credentials are saved sucessfully...");
+                        // ...
+                    })
+                    .catch((error) => {
+                        const errorCode = error.code;
+                        const errorMessage = error.message;
+                        alert(errorMessage);
+                        // ..
+                    });
+                }
+                
         }
     }
 })();

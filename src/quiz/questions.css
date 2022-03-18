@@ -1,0 +1,38 @@
+.quiz{
+    color:green;
+    font-size: x-large;
+    border: lightblue 2px solid;
+    width:50%;
+    height:65%;
+    position:absolute;
+    top:25%;
+    left:25%;
+}
+.question{
+    font-size:1.5em;
+    margin-bottom:30px;
+}
+.option{
+width:50%;
+}
+button.btn.btn-default{
+    border:5px solid yellow;
+    background-color: chocolate;
+    width:50%;
+    margin-bottom:20px;
+    margin-left: 20%;
+    border-radius:20px;
+    transition: all 500ms ease;
+}
+button.btn.btn-default.correct{
+    border:10px solid green;
+}
+button.btn.btn-default.wrong{
+    border:10px solid red; 
+}
+button.btn.btn-default:hover{
+    transform: scale(1.2);
+}
+/* .Radio{
+    margin-left:-5px;
+} */

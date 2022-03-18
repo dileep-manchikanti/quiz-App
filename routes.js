@@ -21,12 +21,25 @@
         .state('instructions',{
             url:'/instructions',
             templateUrl:'src/instructions/instructions.html',
-            controller:"instructionsController",
-            controllerAs:"Ctrl"
+            // controller:"instructionsController",
+            // controllerAs:"Ctrl"
         })
         .state('question',{
             url:'/question',
-            templateUrl:'src/quiz/questions.html'
+            templateUrl:'src/quiz/questions.html',
+            controller:'questionsController',
+            controllerAs:'ctrl'
+        })
+        .state('finalPage',{
+            url:'/finalPage',
+            templateUrl:'src/finalPage/finalPage.html',
+            controller:'finalController',
+            controllerAs:'finalCtrl',
+            resolve: {
+                scores: ['quizService', function (quizService) {
+                  return quizService.getScores();
+                }]
+              }
         })
     }
 })();
