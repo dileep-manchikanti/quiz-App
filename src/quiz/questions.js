@@ -37,6 +37,10 @@ const db = getFirestore(app);
     function questionsController($location,quizService){
         var ctrl=this;
         var service=quizService;
+        if(service.user===undefined){
+            alert("SignIn First to attempt quiz");
+            $location.path('/signIn');
+        }
         ctrl.index=0;
         ctrl.questions=[
             {
@@ -95,7 +99,7 @@ const db = getFirestore(app);
                 alert("YES, Your Answer is Correct");
             }
             else{
-                alert("<h1>Your Answer is wrong!!! Correct Answer is: "+ correct);
+                alert("Your Answer is wrong!!! Correct Answer is: "+ correct);
             }
             console.log(score);
             console.log(service);

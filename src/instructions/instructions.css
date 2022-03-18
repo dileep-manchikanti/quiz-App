@@ -22,9 +22,9 @@ button.btn.btn-default:hover{
     background-color: green;
     transform: scale(1.2);
 }
-h1{
+.heading{
     position: absolute;
-    top:10%;
+    top:14%;
     left:38%;
     color: aqua;
     font-size:xx-large;

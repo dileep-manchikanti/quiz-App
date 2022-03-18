@@ -40,6 +40,6 @@
                   return quizService.getScores();
                 }]
               }
-        })
+        });
     }
 })();
