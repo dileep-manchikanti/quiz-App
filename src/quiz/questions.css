@@ -3,7 +3,7 @@
     font-size: x-large;
     border: lightblue 2px solid;
     width:50%;
-    height:65%;
+    height:70%;
     position:absolute;
     top:25%;
     left:25%;
@@ -32,6 +32,11 @@ button.btn.btn-default.wrong{
 }
 button.btn.btn-default:hover{
     transform: scale(1.2);
+}
+#result{
+    display:none;
+    color:blue;
+    font-size: x-large;
 }
 /* .Radio{
     margin-left:-5px;

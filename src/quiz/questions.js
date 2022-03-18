@@ -78,18 +78,25 @@ const db = getFirestore(app);
             }
             if(num===ctrl.question.correct-1){
                 score+=4;
-                document.getElementById(ctrl.question.correct-1).classList.add('correct');
-                console.log(document.getElementById(num).classList);
-                console.log(document.getElementsByClassName('correct'));
+                document.getElementById('result').style.display="visible"
+                // document.getElementById(ctrl.question.correct-1).classList.add('correct');
+                // console.log(document.getElementById(num).classList);
+                // console.log(document.getElementsByClassName('correct'));
             }
             else {
                 score-=1;
-                document.getElementById(ctrl.question.correct-1).classList.add('correct');
-                document.getElementById(num).classList.add('wrong');
+                // document.getElementById(ctrl.question.correct-1).classList.add('correct');
+                // document.getElementById(num).classList.add('wrong');
 
             }
-            sleep(1000);
-            
+            // sleep(1000);
+            var correct=ctrl.question.options[ctrl.question.correct-1];
+            if(num===ctrl.question.correct-1){
+                alert("YES, Your Answer is Correct");
+            }
+            else{
+                alert("<h1>Your Answer is wrong!!! Correct Answer is: "+ correct);
+            }
             console.log(score);
             console.log(service);
             if(ctrl.index===ctrl.questions.length){

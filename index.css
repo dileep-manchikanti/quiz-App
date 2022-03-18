@@ -80,7 +80,7 @@ a{
   .loading-indiator {
     display: block;
     z-index: 100;
-    background-color: #FFF;
+    background-color: rgb(137, 228, 17);
 }
 img{
     width: 50%;
@@ -91,15 +91,7 @@ img{
     top: 25%;
     /* background-color:#e1e1e1 */
 }
-.loading-indicatr img {
-    width: 50%;
-    height:50%;
-    position: absolute;
-    left: 25%;
-    margin: 0 auto;
-    top: 25%;
-    background-color: #FFF;
-}
+
 
 .ui-view-placeholder {
     margin-top: 60px;
